@@ -1,7 +1,11 @@
 # maximum-bipartite-matching
 
-Here is a very cool image. 
+### The problem. 
 
-And you are going to like it. 
+Given a bipartite graph 
+
+G = (V,E) 
+
+<img src="https://latex.codecogs.com/gif.latex?\int_{a}^{b}"/> 
 
 ![Alt text](resources/img1.png)
