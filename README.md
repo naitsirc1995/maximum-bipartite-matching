@@ -50,8 +50,25 @@ In any case, for simplicity (specially on the implementation) we are going to se
 Similarly, for the edges connected to the sink we could are not forced to 
 use capacities of value 1 and once again that could have interesting interpretations in terms of real world applications. 
 
-The final network flow graph would look as follows. 
+The final network flow graph would look as follows. Now we only have to 
+apply the Ford Fulkerson algorithm on the network flow graph and the edges 
+from the bipartite graph with capacity greater than 0 will be solution 
+to the problem discussed. 
 
 ![Alt text](resources/img5.png)
+
+
+
+## Implementation details
+
+In simple terms we apply Ford Fulkerson to the adjacency matrix that 
+represents the network flow graph formed above. For my specific
+implementation I use DFS traversal. 
+
+More specifically if vertex is not matched we assign it to whichever 
+vertex that is connected to it. If we find that the vertex matched is
+busy we immediately try reasign it using recursivity. If we proceed 
+to reassign a vertex in order to avoid matching the vertex to the same
+value we mark it. If the vertex can be reasigned we keep it in an array. 
 
 <img src="https://latex.codecogs.com/gif.latex?\int_{a}^{b}"/>
