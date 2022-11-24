@@ -19,7 +19,7 @@ Looking for edges with the property just described is trivial, but looking
 for the **MAXIMUM** number of edges with such property is not trivial. 
 
 
-### How to solve the problem ?
+### How to solve the problem using a flow notwork graph?
 
 The approach to solve this problem will be the Ford Fulkerson algorithm.
 The very first step will be to add the source and sink nodes as well as assigning direction to the edges which is ilustrated
@@ -61,14 +61,24 @@ to the problem discussed.
 
 ## Implementation details
 
-In simple terms we apply Ford Fulkerson to the adjacency matrix that 
-represents the network flow graph formed above. For my specific
-implementation I use DFS traversal. 
+I did not use the Ford Fulkerson algorithm for the solution. 
+**it is possible to avoid using residual networks, here is how**.
 
-More specifically if vertex is not matched we assign it to whichever 
-vertex that is connected to it. If we find that the vertex matched is
-busy we immediately try reasign it using recursivity. If we proceed 
-to reassign a vertex in order to avoid matching the vertex to the same
-value we mark it. If the vertex can be reasigned we keep it in an array. 
+I keep the matches in a hash table, which keeps the correspondances. 
+Then I traverse the graph using DFS. This  DFS is applied by looping
+initially through the sources vertices, in every step of the iteration
+I iterate through the target vertices, I keep track of the vertices 
+that have been visited, if the target vertice from the second loop has 
+not been visited and there is a connection with the source target then 
+I will update the hash table, otherwise I will try to reassign the 
+target vertex to any other matching candidate by recursively using 
+the same method just described. 
+
+I designed the following test cases. 
+
+![Alt text](resources/img6.png)
+
+![Alt text](resources/img7.png)
+
 
 <img src="https://latex.codecogs.com/gif.latex?\int_{a}^{b}"/>
