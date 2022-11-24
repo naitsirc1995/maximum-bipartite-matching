@@ -21,13 +21,23 @@ for the **MAXIMUM** number of edges with such property is not trivial.
 
 ### How to solve the problem ?
 
-The approach to solve this problem will be the Ford Fulkerson algorithm. 
-The very first step will be to the source and sink nodes as ilustrated 
-in the following picture. 
-
-And something else. 
+The approach to solve this problem will be the Ford Fulkerson algorithm.
+The very first step will be to the source and sink nodes as ilustrated
+in the following picture.
 
 ![Alt text](resources/img3.png)
+
+
+The very first question that we have to ask, now that we have a source, 
+a sink and the rest of the edges, how are we going to get assign the 
+capacities. 
+
+
+Initially, we will set the capacities for the edges that we want to 
+maximize as 1. Which would look as follows. 
+
+![Alt text](resources/img4.png)
+
 
 
 <img src="https://latex.codecogs.com/gif.latex?\int_{a}^{b}"/>
