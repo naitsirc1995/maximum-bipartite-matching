@@ -83,4 +83,5 @@ I designed the following test cases.
 ![Alt text](resources/img8.png)
 
 
-<img src="https://latex.codecogs.com/gif.latex?\int_{a}^{b}"/>
+All test cases were run successfuly and it can be checked by running 
+the following the main code. 
